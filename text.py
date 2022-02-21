@@ -6,7 +6,10 @@ print(old_text)
 
 text_pl = "to jest tekst który napisałem z path write"
 text = '\n'.join((old_text, text_pl))
-Path('text.txt').write_text(text, encoding='utf-8')
 Path('create_new_text.txt').write_text(text, encoding='utf-8')
+
+bytes = Path("text.txt").read_bytes()
+print('bytes:', bytes)
+
 
 
